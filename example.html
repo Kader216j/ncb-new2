@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        /* .container8 {
+            display: flex;
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .left-side {
+            width: 40%;
+            background: #fff4cc;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .left-side h2 {
+            font-size: 24px;
+            color: black;
+        }
+        .left-side span {
+            color: #f4b400;
+            font-weight: bold;
+        }
+        .right-side {
+            width: 60%;
+            padding: 30px;
+            position: relative; 
+        }
+        .right-side h2 {
+            font-size: 24px;
+            color: black;
+        }
+        .highlight {
+            color: #f4b400;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 98%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #FFCC00;
+            border-radius: 5px;
+        }
+        select{
+            width:102% ;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #FFCC00;
+            border-radius: 5px;
+        }
+        .radio input{
+            width: 20px;
+        }
+        .radio button{
+            margin-top: 20px;
+        }
+        .form-button {
+            width: 100%;
+            background: #f4b400;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        label {
+            margin: 10px 0;
+        }
+        .illustration {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-content {
+            background: white;
+            padding: 20px;
+            width: 50%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            position: relative;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+      
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+
+        }
+
+        .p-close{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .pp-close{
+            width: 50%;
+            button{
+                float: right;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @media (max-width: 1024px){
+            .popup-content{
+                width: 80%;
+                height: auto;
+            }
+        }
+        @media (max-width:905px){
+            .left-side{
+                display: none;
+            }
+            .container8 {
+                width: 80%;
+                height: auto;
+            }
+            .right-side{
+                width: 100%;
+                height: auto;
+                padding: 10px 30px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .popup-content {
+                width: 90%;
+                height: auto;
+            }
+            .container8 {
+                width: 80%;
+                height: auto;
+            }
+        } */
+
+        .invalid-feedback,
+            .empty-feedback {
+            display: none;
+            }
+
+            .was-validated :placeholder-shown:invalid ~ .empty-feedback {
+            display: block;
+            }
+
+            .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+            display: block;
+            }
+
+            .is-invalid,
+            .was-validated :invalid {
+            border-color: #dc3545;
+            }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Enquiry Button -->
+    <nav>
+        <ul>
+            <li><a href="#"><button class="enq-btn" onclick="openPopup()">Enquiry</button></a></li>
+        </ul>
+    </nav>
+
+    <!-- Popup Modal -->
+    <!-- <div class="popup" id="enquiryPopup">
+        <div class="container8">
+            <div class="left-side">
+                <h2>Do you have a <span>Questions?</span></h2>
+                <p>Serving the greater Seattle area beyond. For more information on our services, or to inquire about a future project, give us a call!</p>
+                <img src="./asset/images/Group 233.png" alt="Get in touch illustration" class="illustration">
+            </div>
+            <div class="right-side">
+                <div class="p-close">
+                    <div class="pp-close">
+                        <h2>Quick <span class="highlight">Enquiry</span></h2>
+                    </div>
+                    <div class="pp-close">
+                        <button class="close-btn" onclick="closePopup()">&times;</button> 
+                    </div>
+                </div>
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    
+                     <input type="hidden" name="access_key" value="72fd254e-1b15-44fe-a3a5-c36cddab4f4f">
+
+                    <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your mail I'd" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number" required>
+                    <select id="services">
+                        <option value="">Services</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Interior Design">Interior Design</option>
+                        <option value="Renovation">Renovation</option>
+                    </select>
+                    <textarea id="details" placeholder="Enter Your Details" required></textarea>
+                    <div class="radio">
+                        <input type="checkbox" id="robotCheck"><label>I'm not a robot</label>
+                        <button type="submit" class="form-button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto">
+          <div class="max-w-xl mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+            <div class="text-center">
+              <h1
+                class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200"
+              >
+                Contact Us
+              </h1>
+            </div>
+            <div class="m-7">
+              <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
+                <input type="hidden" name="access_key" value="72fd254e-1b15-44fe-a3a5-c36cddab4f4f" />
+                <input type="hidden" name="subject" value="New Submission from Web3Forms"/>
+
+
+                <input type="checkbox" name="botcheck" id="" style="display: none;" />
+      
+                <div class="flex mb-6 space-x-4">
+                  <div class="w-full md:w-1/2">
+                    <label
+                      for="fname"
+                      class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                      >First Name</label
+                    >
+                    <input
+                      type="text"
+                      name="name"
+                      id="first_name"
+                      placeholder="John"
+                      required
+                      class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                    />
+                    <div
+                      class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+                    >
+                      Please provide your first name.
+                    </div>
+                  </div>
+                  <div class="w-full md:w-1/2">
+                    <label
+                      for="lname"
+                      class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                      >Last Name</label
+                    >
+                    <input
+                      type="text"
+                      name="last_name"
+                      id="lname"
+                      placeholder="Doe"
+                      required
+                      class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                    />
+                    <div
+                      class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+                    >
+                      Please provide your last name.
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="flex mb-6 space-x-4">
+                  <div class="w-full md:w-1/2">
+                    <label
+                      for="email"
+                      class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="you@company.com"
+                      required
+                      class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                    />
+                    <div class="empty-feedback text-red-400 text-sm mt-1">
+                      Please provide your email address.
+                    </div>
+                    <div class="invalid-feedback text-red-400 text-sm mt-1">
+                      Please provide a valid email address.
+                    </div>
+                  </div>
+      
+                  <div class="w-full md:w-1/2">
+                    <label
+                      for="phone"
+                      class="block text-sm mb-2 text-gray-600 dark:text-gray-400"
+                      >Phone Number</label
+                    >
+                    <input
+                      type="text"
+                      name="phone"
+                      id="phone"
+                      placeholder="+1 (555) 1234-567"
+                      required
+                      class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                    />
+      
+                    <div
+                      class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+                    >
+                      Please provide your phone number.
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="message"
+                    class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                    >Your Message</label
+                  >
+      
+                  <textarea
+                    rows="5"
+                    name="message"
+                    id="message"
+                    placeholder="Your Message"
+                    class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                    required
+                  ></textarea>
+                  <div
+                    class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+                  >
+                    Please enter your message.
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <button
+                    type="submit"
+                    class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
+                  >
+                    Send Message
+                  </button>
+                </div>
+                <p class="text-base text-center text-gray-400" id="result"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+    <script>
+        // function openPopup() {
+        //     document.getElementById("enquiryPopup").style.display = "flex";
+        // }
+
+        // function closePopup() {
+        //     document.getElementById("enquiryPopup").style.display = "none";
+        // }
+
+        // document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+        //     event.preventDefault();
+        //     let name = document.getElementById("name").value;
+        //     let phone = document.getElementById("phone").value;
+        //     let details = document.getElementById("details").value;
+        //     let url = `https://wa.me/919597751076?text=Name: ${name}%0APhone: ${phone}%0ADetails: ${details}`;
+        //     window.open(url, "_blank");
+        // });
+
+
+        (function () {
+                "use strict";
+                /*
+                * Form Validation
+                */
+
+                // Fetch all the forms we want to apply custom validation styles to
+                const forms = document.querySelectorAll(".needs-validation");
+                const result = document.getElementById("result");
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms).forEach(function (form) {
+                    form.addEventListener(
+                    "submit",
+                    function (event) {
+                        if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        form.querySelectorAll(":invalid")[0].focus();
+                        } else {
+                        /*
+                        * Form Submission using fetch()
+                        */
+                        event.preventDefault();
+                        event.stopPropagation();
+                        
+                        const formData = new FormData(form);
+                        const object = Object.fromEntries(formData);
+                        const json = JSON.stringify(object);
+                        result.innerHTML = "Please wait...";
+
+                        fetch("https://api.web3forms.com/submit", {
+                            method: "POST",
+                            headers: {
+                            "Content-Type": "application/json",
+                            Accept: "application/json",
+                            },
+                            body: json,
+                        })
+                            .then(async (response) => {
+                            let json = await response.json();
+                            if (response.status == 200) {
+                                result.innerHTML = json.message;
+                                result.classList.remove("text-gray-500");
+                                result.classList.add("text-green-500");
+                            } else {
+                                console.log(response);
+                                result.innerHTML = json.message;
+                                result.classList.remove("text-gray-500");
+                                result.classList.add("text-red-500");
+                            }
+                            })
+                            .catch((error) => {
+                            console.log(error);
+                            result.innerHTML = "Something went wrong!";
+                            })
+                            .then(function () {
+                            form.reset();
+                            form.classList.remove("was-validated");
+                            setTimeout(() => {
+                                result.style.display = "none";
+                            }, 5000);
+                            });
+                        }
+                        form.classList.add("was-validated");
+                    },
+                    false
+                    );
+                });
+                })();
+    </script>
+
+</body>
+</html>

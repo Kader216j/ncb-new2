@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="./asset/css/design&plan.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Navbar section starts here -->
+    <div class="navbar-section">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="./asset/images/logo.jpg" alt=""></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./plan-design.html">Plan& Pricing</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="#"><button class="enq-btn" onclick="openPopup()">Enquiry</button></a></li>            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </div>
+
+    <!-- popup starts here -->
+    <div class="popup" id="enquiryPopup">
+        <div class="container8">
+            <div class="left-side">
+                <h2>Do you have a <span>Questions?</span></h2>
+                <p>Serving the greater Seattle area beyond. For more information on our services, or to inquire about a future project, give us a call!</p>
+                <img src="./asset/images/Group 233.png" alt="Get in touch illustration" class="illustration">
+            </div>
+            <div class="right-side">
+                <div class="p-close">
+                    <div class="pp-close">
+                        <h2>Quick <span class="highlight">Enquiry</span></h2>
+                    </div>
+                    <div class="pp-close">
+                        <button class="close-btn" onclick="closePopup()">&times;</button> <!-- Close Button -->
+                    </div>
+                </div>
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <!-- Replace with your Access Key -->
+                     <input type="hidden" name="access_key" value="72fd254e-1b15-44fe-a3a5-c36cddab4f4f">
+
+                    <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your mail I'd" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number" required>
+                    <select id="services">
+                        <option value="">Services</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Interior Design">Interior Design</option>
+                        <option value="Renovation">Renovation</option>
+                    </select>
+                    <textarea id="details" placeholder="Enter Your Details" required></textarea>
+                    <div class="radio">
+                        <input type="checkbox" id="robotCheck"><label>I'm not a robot</label>
+                        <button type="submit" class="form-button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Panner section starts here  -->
+    <div class="hero-section">
+        <div class="hero-image">
+            <img src="./asset/images/consult.jpeg" alt="Modern Villa">
+        </div>
+    </div>
+
+    <!-- Choose your plan starts here -->
+    <div class="container">
+        <h1>Choose Your <span class="highlight">Design</span> Packages</h1><br>
+        <p>
+            Our Design Package feature allows you to select a construction design plan that best fits your vision and budget. Whether you need a basic, Standard, or Premium package, we offer tailored solutions with detailed architectural layouts, 3D renderings, and expert consultations. Simplify your construction journey with a design package that meets your needs!
+        </p>
+    </div>
+
+
+    <div class="container1">
+        <div class="buttons">
+            <button class="btn btn-basic" onclick="showBasic()">Basic Package</button>
+            <button class="btn btn-standard" onclick="showStandard()">Standard Package</button>
+            <button class="btn btn-premium" onclick="showPremium()">Premium Package</button>
+        </div>
+    
+        <div class="row1">
+            <div class="pricing-card">
+                <img src="./asset/images/Screenshot 2025-03-12 114358.png" alt="Basic Logo">
+            </div>
+            <div class="package-image">
+                <div class="image-package">
+                    <img src="./asset/images/const-packages.png" alt="Basic Construction">
+                </div>
+                <div class="image-package">
+                    <img src="./asset/images/electric-packages.png" alt="Basic Electrical">
+                </div>
+            </div>
+            <div class="package-image">
+                <div class="image-package">
+                    <img src="./asset/images/plumbing.png" alt="Basic Plumbing">
+                </div>
+                <div class="image-package">
+                    <img src="./asset/images/extra-work.png" alt="Basic Extra Work">
+                </div>
+            </div>
+        </div>
+
+        <div class="row2 hidden">
+            <div class="pricing-card">
+                <img src="./asset/images/stand-logo.png" alt="Standard Logo">
+            </div>
+            <div class="package-image">
+                <div class="image-package">
+                    <img src="./asset/images/stand-cons.png" alt="Standard Construction">
+                </div>
+                <div class="image-package">
+                    <img src="./asset/images/stand-electric.png" alt="Standard Electrical">
+                </div>
+            </div>
+            <div class="package-image">
+                <div class="image-package">
+                    <img src="./asset/images/stand-pulbling.png" alt="Standard Plumbing">
+                </div>
+                <div class="image-package">
+                    <img src="./asset/images/stand-extra.png" alt="Standard Extra Work">
+                </div>
+            </div>
+        </div>
+
+        <div class="row3 hidden">
+            <div class="pricing-card">
+                <img src="./asset/images/pre-logo.png" alt="Premium Logo">
+            </div>
+            <div class="package-image">
+                <div class="image-package">
+                    <img src="./asset/images/pre-cons.png" alt="Premium Construction">
+                </div>
+                <div class="image-package">
+                    <img src="./asset/images/pre-electric.png" alt="Premium Electrical">
+                </div>
+            </div>
+            <div class="package-image">
+                <div class="image-package">
+                    <img src="./asset/images/pre-plumbing.png" alt="Premium Plumbing">
+                </div>
+                <div class="image-package">
+                    <img src="./asset/images/pre-extra.png" alt="Premium Extra Work">
+                </div>
+            </div>
+        </div>
+        
+    </div> 
+
+    <!-- Footer section starts here  -->
+    <div class="footer">
+        <div class="footer-container">
+            <!-- Company Info -->
+            <div class="footer-column">
+                <img src="./asset/images/logo.jpg" alt="Nagercoil Builders Logo" class="footer-logo">
+                <!-- <h3><span class="highlight">Nagercoil</span> Builders</h3> -->
+                <p>Nagercoil Builders offering a range of services from residential and commercial building to interior
+                    design and renovation.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/nagercoilbuilderss?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./asset/images/instagram.png" alt="Instagram"></a>
+                    <a href="http://www.youtube.com/@Nagercoilbuilders"><img src="./asset/images/youtube.png" alt="YouTube"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61563730416828"><img src="./asset/images/communication.png" alt="Facebook"></a>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="footer-column">
+                <h4 class="highlight">Categories</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Services</li>
+                    <li>Plans and Pricing</li>
+                    <li>Projects</li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-column">
+                <h4 class="highlight">Contact Us</h4>
+                <ul class="contact-info">
+                    <li><i class='bx bxs-phone icon'></i> +91 9597751076, 9443102048</li>
+                    <li><i class='bx bxs-envelope icon' ></i> nagercoilbuilders31@gmail.com</li>
+                    <li><i class='bx bx-world icon' ></i> www.nagercoilbuilders.com</li>
+                    <li><i class='bx bxs-navigation icon'></i> 4/26A Adaikalapattinam, Pavoorchatram.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./asset/js/home.js"></script>
+</body>
+
+</html>
