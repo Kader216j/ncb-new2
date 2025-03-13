@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagercoil Buliders</title>
+    <link rel="stylesheet" href="./asset/css/home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Navbar section starts here -->
+    <div class="navbar-section">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="./asset/images/logo.jpg" alt=""></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./design&plan.html">Plan& Pricing</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="#"><button class="enq-btn" onclick="openPopup()">Enquiry</button></a></li>            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </div>
+
+    <!-- popup starts here -->
+    <div class="popup" id="enquiryPopup">
+        <div class="container8">
+            <div class="left-side">
+                <h2>Do you have a <span>Questions?</span></h2>
+                <p>Serving the greater Seattle area beyond. For more information on our services, or to inquire about a future project, give us a call!</p>
+                <img src="./asset/images/Group 233.png" alt="Get in touch illustration" class="illustration">
+            </div>
+            <div class="right-side">
+                <div class="p-close">
+                    <div class="pp-close">
+                        <h2>Quick <span class="highlight">Enquiry</span></h2>
+                    </div>
+                    <div class="pp-close">
+                        <button class="close-btn" onclick="closePopup()">&times;</button> <!-- Close Button -->
+                    </div>
+                </div>
+                <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
+                    <input type="hidden" name="access_key" value="72fd254e-1b15-44fe-a3a5-c36cddab4f4f" />
+                    <input type="hidden" name="subject" value="New Submission from Web3Forms"/>
+
+                    <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your mail I'd" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number" required>
+                    <select id="services">
+                        <option value="">Services</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Interior Design">Interior Design</option>
+                        <option value="Renovation">Renovation</option>
+                    </select>
+                    <textarea id="details" placeholder="Enter Your Details" required></textarea>
+                    <div class="radio">
+                        <input type="checkbox" id="robotCheck"><label>I'm not a robot</label>
+                        <button type="submit" class="form-button">Submit</button>
+                    </div>
+                    <div>
+                        <p class="text-base text-center text-gray-400" id="result"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Panner section starts here -->
+    <div class="panner-section">
+        <div class="panner-image">
+            <img src="./asset/images/Nagercoil Builders Website.png" alt="">
+        </div>
+        <div class="panner-content">
+            <div class="overlay"></div>
+            <div class="content">
+                <h1>Your <span>dream</span> space, built to perfection.</h1>
+                <p>Ready to bring your project to life? Let's create something extraordinary together.</p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+        <img src="./asset/images/Rectangle 11.png" alt="Background Image" class="bg-image">
+        <div class="overlay"></div>
+        <h2 style="text-align: center;"><span>Nagercoil</span> Builders</h2>
+
+        <div class="features-container">
+            <div class="feature-box">
+                <img src="./asset/images/4 1.png" alt="Calendar">
+                <p>Calendered Date</p>
+            </div>
+            <div class="feature-box">
+                <img src="./asset/images/14 (1) 1.png" alt="Quality">
+                <p>Quality Guaranteed</p>
+            </div>
+            <div class="feature-box">
+                <img src="./asset/images/12 (1) 1.png" alt="Low Cost">
+                <p>Low Cost</p>
+            </div>
+            <div class="feature-box">
+                <img src="./asset/images/19 1.png" alt="Top Rated">
+                <p>Top Rated</p>
+            </div>
+            <div class="feature-box">
+                <img src="./asset/images/6 (1) 1.png" alt="Budget">
+                <p>Budget Friendly</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why choose us     -->
+    <div class="why-choose-us">
+        <div class="container">
+            <h2>Why <span>Choose</span> Us</h2>
+            <p>
+                At Nagercoil Builders, we deliver top-quality construction with precision, reliability,
+                and excellence. Our expert team ensures on-time project completion, using premium materials
+                and innovative techniques. With a commitment to safety and customer satisfaction, we bring
+                your vision to life with professionalism and integrity. Choose us for a hassle-free
+                building experience!
+            </p>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services-section">
+        <div class="services-container">
+            <div class="services">
+                <div class="service-box">
+                    <img src="./asset/images/3d-cartoon-scene-depicting-variety-people-multitasking.png"
+                        alt="Experienced Team">
+                    <div class="service-text">
+                        <h3>Experienced Team</h3>
+                        <p>Our experienced team combines expertise, innovation, and dedication to deliver exceptional
+                            construction results tailored to your vision.</p>
+                    </div>
+                </div>
+
+                <div class="service-box">
+                    <img src="./asset/images/19-removebg-preview.png" alt="Quality Construction">
+                    <div class="service-text">
+                        <h3>Quality Construction</h3>
+                        <p>Delivering excellence through superior craftsmanship, durable materials, and meticulous
+                            attention to detail in every project.</p>
+                    </div>
+                </div>
+
+                <div class="service-box">
+                    <img src="./asset/images/3d-cartoon-scene-depicting-variety-people-multitasking_23-2151294465-removebg-preview.png"
+                        alt="Customizable Designs">
+                    <div class="service-text">
+                        <h3>Customizable Designs</h3>
+                        <p>Experience the freedom of customizable designs tailored to match your unique vision and
+                            lifestyle.</p>
+                    </div>
+                </div>
+
+                <div class="service-box">
+                    <img src="./asset/images/3d-render-construction-worker-family-with-child-white-background_1057-145926-removebg-preview.png"
+                        alt="Transparent Process">
+                    <div class="service-text">
+                        <h3>Transparent Process</h3>
+                        <p>Our transparent process ensures clear communication, no hidden costs, and full visibility at
+                            every stage, so you can trust us to deliver exactly what we promise.</p>
+                    </div>
+                </div>
+
+                <div class="service-box">
+                    <img src="./asset/images/h34 (1).png" alt="Timely Completion">
+                    <div class="service-text">
+                        <h3>Timely Completion</h3>
+                        <p>We are committed to delivering every project on time, ensuring efficient execution without
+                            compromising on quality.</p>
+                    </div>
+                </div>
+
+                <div class="service-box">
+                    <img src="./asset/images/2151755755.png" alt="In-house Experts">
+                    <div class="service-text">
+                        <h3>In-house team of experts</h3>
+                        <p>Our in-house team of experts ensures every project is executed with precision, expertise, and
+                            dedication.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-image">
+                <img src="./asset/images/9 1.png" alt="Building">
+            </div>
+        </div>
+    </div>
+
+    <!-- Services we provides -->
+    <section class="services-we-provide">
+        <div class="services-info-block">
+            <h2 class="services-title"><span>Services</span> We Provide</h2>
+            <p class="services-description">
+                We offer a comprehensive range of construction services, including residential and commercial building,
+                renovation, interior design, and project management.
+                Our skilled team ensures high-quality craftsmanship, timely delivery, and cost-effective solutions.
+                From concept to completion, we turn your ideas into reality with excellence and reliability.
+            </p>
+        </div>
+    </section>
+
+    <!-- Image Section -->
+    <div class="buit-container">
+        <div class="buit-box">
+            <img class="buit-pic" src="./asset/images/40dfd225e5f24c834242b61979650d83.png" alt="Consulting">
+            <a href="./consulting.html" class="buit-tag">Consulting</a>
+        </div>
+        <div class="buit-box">
+            <img class="buit-pic" src="./asset/images/8ea5e1978a24e85141f5369fd6b00ed1.png" alt="Estimate">
+            <a href="./estimate.html" class="buit-tag">Estimate</a>
+        </div>
+    </div>
+
+    <div class="const-row">
+        <div class="const-large">
+            <img class="const-pic" src="./asset/images/9d34c47344837dd70b5e154254662a81.jpeg" alt="Plan & Design">
+            <a href="./constructions.html" class="const-tag">Plan & Design</a>
+        </div>
+        <div class="const-small">
+            <img class="const-pic" src="./asset/images/image 6.png" alt="Construction">
+            <a href="#" class="const-tag">Construction</a>
+        </div>
+    </div>
+
+    <div class="buit-container">
+        <div class="buit-box">
+            <img class="buit-pic" src="./asset/images/19074.png" alt="Consulting">
+            <a href="./flooring.html" class="buit-tag">Flooring Work</a>
+        </div>
+        <div class="buit-box">
+            <img class="buit-pic" src="./asset/images/istockphoto-938085736-612x612.png" alt="Estimate">
+            <a href="#" class="buit-tag">Painting Work</a>
+        </div>
+    </div>
+    <div class="view-btn">
+        <a href="./services.html"><button>View More</button></a>
+    </div>
+
+    <!-- Review section starts here -->
+    <div class="review">
+        <div class="review-section">
+            <h2 class="review-title">Our <span class="highlight">Client</span> Reviews</h2>
+
+            <div class="review-container">
+                <div class="review-card">
+                    <img class="review-img" src="./asset/images/Rectangle 16.png" alt="Review 1">
+                    <div class="review-content">
+                        <img class="profile-pic" src="./asset/images/aron.jpeg" alt="Aaron">
+                        <h3>Aaron</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur Netus aliquam aliquet urna eu quis vel non aenean
+                            urna.</p>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <div class="review-card1">
+                    <img class="review-img" src="./asset/images/Rectangle 17.png" alt="Review 2">
+                    <div class="review-content">
+                        <img class="profile-pic" src="./asset/images/adlina.jpeg" alt="Adelina">
+                        <h3>Adelina</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur Netus aliquam aliquet urna eu quis vel non aenean
+                            urna.</p>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <img class="review-img" src="./asset/images/Rectangle 18.png" alt="Review 3">
+                    <div class="review-content">
+                        <img class="profile-pic" src="./asset/images/client.jpeg" alt="Client">
+                        <h3>Client</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur Netus aliquam aliquet urna eu quis vel non aenean
+                            urna.</p>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section starts here  -->
+    <div class="footer">
+        <div class="footer-container">
+            <!-- Company Info -->
+            <div class="footer-column">
+                <img src="./asset/images/logo.jpg" alt="Nagercoil Builders Logo" class="footer-logo">
+                <!-- <h3><span class="highlight">Nagercoil</span> Builders</h3> -->
+                <p>Nagercoil Builders offering a range of services from residential and commercial building to interior
+                    design and renovation.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/nagercoilbuilderss?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./asset/images/instagram.png" alt="Instagram"></a>
+                    <a href="http://www.youtube.com/@Nagercoilbuilders"><img src="./asset/images/youtube.png" alt="YouTube"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61563730416828"><img src="./asset/images/communication.png" alt="Facebook"></a>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="footer-column">
+                <h4 class="highlight">Categories</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Services</li>
+                    <li>Plans and Pricing</li>
+                    <li>Projects</li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-column">
+                <h4 class="highlight">Contact Us</h4>
+                <ul class="contact-info">
+                    <li><i class='bx bxs-phone icon'></i> +91 9597751076, 9443102048</li>
+                    <li><i class='bx bxs-envelope icon' ></i> nagercoilbuilders31@gmail.com</li>
+                    <li><i class='bx bx-world icon' ></i> www.nagercoilbuilders.com</li>
+                    <li><i class='bx bxs-navigation icon'></i> 4/26A Adaikalapattinam, Pavoorchatram.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./asset/js/home.js"></script>
+</body>
+
+</html>

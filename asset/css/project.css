@@ -1,0 +1,489 @@
+/*  Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+/*  Navbar Section */
+.navbar-section {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #040837;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+}
+
+.navbar .logo img {
+    width: 120px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #FFCC00;
+}
+
+/*  Enquiry Button */
+.enq-btn {
+    background-color: #FFCC00;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.enq-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: #040837;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+    .navbar{
+        justify-content: space-between;
+    }
+}
+
+
+
+/* popup starts here */
+.container8 {
+    display: flex;
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.left-side {
+    width: 40%;
+    background: #fff4cc;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.left-side h2 {
+    font-size: 24px;
+    color: black;
+}
+.left-side span {
+    color: #f4b400;
+    font-weight: bold;
+}
+.right-side {
+    width: 60%;
+    padding: 30px;
+    position: relative; /* Needed for close button */
+}
+.right-side h2 {
+    font-size: 24px;
+    color: black;
+}
+.highlight {
+    color: #f4b400;
+    font-weight: bold;
+}
+input, select, textarea {
+    width: 98%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #FFCC00;
+    border-radius: 5px;
+}
+.radio input{
+    width: 20px;
+}
+.radio button{
+    margin-top: 20px;
+}
+.form-button {
+    width: 100%;
+    background: #f4b400;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+label {
+    margin: 10px 0;
+}
+.illustration {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Popup Modal */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.popup-content {
+    background: white;
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+
+}
+
+.p-close{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.pp-close{
+    width: 50%;
+    button{
+        float: right;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 1024px){
+    .popup-content{
+        width: 80%;
+        height: auto;
+    }
+}
+@media (max-width:905px){
+    .left-side{
+        display: none;
+    }
+    .container8 {
+        width: 80%;
+        height: auto;
+    }
+    .right-side{
+        width: 100%;
+        height: auto;
+        padding: 10px 30px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .popup-content {
+        width: 90%;
+        height: auto;
+    }
+    .container8 {
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* Panner section starts here */
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh;
+    }
+    .hero-image img {
+        height: 70vh;
+    }
+}
+
+
+
+/* our milestones starts here */
+.heading{
+    width: 100%;
+    text-align: center;
+    margin: 30px 0px;
+    h2{
+        font-size: 40px;
+    }
+}
+.head-color{
+    color: #FFCC00;
+}
+
+/* General Styles */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Adds space between images */
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.row img {
+    width: 80%;
+    max-width: 300px; /* Prevents images from being too large */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Smooth corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.row img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive Grid */
+@media screen and (min-width: 576px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for desktops */
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(5, 1fr); /* 5 columns for larger screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer section starts here */
+.footer {
+    background-color: #040837;
+    color: white;
+    padding: 40px 60px;
+    font-family: poppins, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+}
+
+/* Columns */
+.footer-column {
+    flex: 1;
+    margin-right: 40px;
+}
+
+/* Logo */
+.footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Heading Styling */
+.footer h3, h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer .highlight {
+    color: #f7c843;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 50px;
+}
+/* Paragraph & List */
+.footer p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 20px;
+    margin-bottom: 8px;
+    line-height: 1.9;
+    cursor: pointer;
+}
+
+/* Social Icons */
+.social-icons img {
+    margin-top: 20px;
+    width: 40px;
+    margin-right: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Contact Section */
+.contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon{
+    border: 1px solid #FFCC00;
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    padding: 2px;
+    background-color: #FFCC00;
+    color: black;
+}
+/* Responsive */
+@media (max-width:1440px){
+    .footer{
+        width: 100%;
+        padding: 40px 20px;
+    }
+    .footer-container{
+        width: 100%;
+    }
+    .footer-column{
+        flex: 2;
+    }
+}
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+    .footer p{
+        font-size: 17px;
+    }
+    ul li{
+        font-size: 17;
+    }
+    .contact-info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
